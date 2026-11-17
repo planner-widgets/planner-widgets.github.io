@@ -36,7 +36,7 @@ function shift(d,n){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());x.s
 function monthLength(d,j){var n=j[2],x=shift(d,0);for(var i=0;i<32;i++){x.setDate(x.getDate()+1);if(jal(x)[1]!==j[1])break;n++}return n}
 
 var hi=document.getElementById('hi'),hm=document.getElementById('hm'),date=document.getElementById('date');
-function greet(h){return h>=5&&h<11?'صبح بخیر':h>=11&&h<15?'ظهر بخیر':h>=15&&h<19?'عصر بخیر':'شب بخیر'}
+function greet(h){return h>=5&&h<11?'صبح بخیر':h>=11&&h<15?'ظهر بخیر':h>=15&&h<20?'عصر بخیر':'شب بخیر'}
 function tick(){var d=new Date(),j=jal(d);
 hi.textContent=greet(d.getHours());
 hm.textContent=fa(two(d.getHours())+':'+two(d.getMinutes()));
